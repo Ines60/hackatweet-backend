@@ -7,6 +7,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var tweetsRouter = require("./routes/tweet");
 
 var app = express();
 var cors = require("cors");
@@ -20,5 +21,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/tweet", tweetsRouter);
 
 module.exports = app;
