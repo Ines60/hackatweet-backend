@@ -7,6 +7,10 @@ const tweetSchema = mongoose.Schema({
     required: true,
   },
   likeBy: [{ type: String }],
+  createdAt: {
+    type: Date,
+    default: () => Date.now(),
+  },
 });
 
 const Tweet = mongoose.model("tweets", tweetSchema);
