@@ -6,4 +6,8 @@ var router = express.Router();
 //   res.render('index', { title: 'Express' });
 // });
 
+router.get("/test", (req, res) => {
+  res.json({ test: "123123123" });
+});
+
 module.exports = router;
